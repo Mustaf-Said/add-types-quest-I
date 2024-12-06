@@ -5,6 +5,7 @@ export const prettyPrintMonster = (m) => {
 };
 
 export const averageMonsterAge = (m) => {
+	
 	return 2;
 };
 

@@ -1,5 +1,5 @@
 import "./styles.css";
-import { averageAge, averageNumberOfHobbies } from "./func/user-functions";
+import { averageAge, averageNumberOfHobbies, flestOfHobbies, getOldPerson, getYoungPerson } from "./func/user-functions";
 import {
 	averageMonsterAge,
 	averageNumberOfTentacles,
@@ -9,9 +9,11 @@ import {
 } from "./func/monster";
 import { commonColor, numberOfColors } from "./func/dog";
 
+
 // Fixa så funktionen gör det den ska
-const printSum = (a, b) => {
-	console.log(0);
+const printSum = (a: number, b: number) => {
+	console.log(a + b);
+	/* return a + b */
 };
 
 printSum(1, 2);
@@ -50,8 +52,19 @@ console.log(`Medelåldern på alla användare är ${averageAge(arr)}`);
 console.log(
 	`Medelantalet hobbies per användare är ${averageNumberOfHobbies(arr)}`
 );
-// skriv ut "Den personen med flest hobbies har Y stycken hobbies". Byt ut Y mot ett funktionsanrop. Skapa den funktionen.
-// skriv ut "Den äldsta personen är A och den yngsta är B". Byt ut A och B mot funktionsanrop. Ska de två funktionerna
+// skriv ut "Den personen med flest hobbies har Y stycken hobbies". 
+console.log(
+	`personen med flest hobbies har ${flestOfHobbies(arr)} stycken hobbies`
+);
+//Byt ut Y mot ett funktionsanrop. Skapa den funktionen.
+// skriv ut "Den äldsta personen är A och den yngsta är B". 
+console.log(
+	`Äldest person i gruppen är ${getOldPerson(arr)}`
+);
+//Byt ut A och B mot funktionsanrop. Ska de två funktionerna
+console.log(
+	`Äldest person i gruppen är ${getYoungPerson(arr)}`
+);
 
 const dogs = [
 	{ name: "Nisse", color: "brown" },
